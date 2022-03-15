@@ -10,35 +10,46 @@
 </head>
 <body>
   <!--header start-->
-  <header class="container d-flex justify-content-center align-items-center ">
+  <header class="container-fluid p-5 d-flex justify-content-center align-items-center bg-danger">
     <img src="images\dices.png" alt="dices image" width="100" height="100">
     <h1 class="ms-3">JEU DE DÈS</h1>
   </header>
   <!--header end-->
   <!--Main start-->
-  <main class="container">
+  <main class="container-fluid">
     <div class="row">
       <!--LEFT SIDE OF MAIN-->
-      <section class="col-5">
-        <h2>PLAYER 1</h2>
-        <div id="globalP1"></div>
-        <div id="currentP1">CURRENT</div>
+      <section class="col col-sm-5 text-center mx-auto">
+        <h2 class="mt-5 row justify-content-center">PLAYER 1</h2>
+        <div id="globalP1" class="row text-danger display-2 pb-5 justify-content-center">00</div>
+        <div class="row justify-content-center">
+          <div class="bg-danger mt-5 " style="width: fit-content;">
+            <div id="currentP1">CURRENT</div>
+            <div id="currentScoreP1" class="text-white h4 mt-3">00</div>
+          </div>
+        </div>
       </section>
 
       <!--IN THE MIDDLE OF MAIN-->
-      <div class="col-2">
-        <div id="newGame">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+      <div class="col col-sm-2 text-center mx-auto">
+        <div id="newGame" class="mt-3 mb-5 pb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="text-danger bi bi-plus-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
           </svg>
           NEWGAME
         </div>
-        <div id="dice">
+        <div id="dice" class="mt-5 mb-5 pb-3">
+          <img src="images\dice-face-6.png" alt="your dice face is 6" width="70" height="70" class="d-none">
+          <img src="images\dice-face-1.jpg" alt="your dice face is 1" width="70" height="70" class="d-none">
+          <img src="images\dice-face-2.png" alt="your dice face is 2" width="70" height="70" class="">
+          <img src="images\dice-face-3.png" alt="your dice face is 3" width="70" height="70" class="d-none">
+          <img src="images\dice-face-4.png" alt="your dice face is 4" width="70" height="70" class="d-none">
+          <img src="images\dice-face-5.png" alt="your dice face is 5" width="70" height="70" class="d-none">
         </div>
       
-        <div id="rollDice">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+        <div id="rollDice" class="mt-5 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="text-danger bi bi-arrow-repeat" viewBox="0 0 16 16">
             <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
             <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
           </svg>
@@ -46,7 +57,7 @@
         </div>
 
         <div id="hold">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-down" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="text-danger bi bi-box-arrow-in-down" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
             <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
           </svg>
@@ -55,10 +66,15 @@
       </div>
 
       <!--RIGHT SIDE OF MAIN-->
-      <section class="col-5">
-        <h2>PLAYER 2</h2>
-        <div id="globalP2"></div>
-        <div id="currentP2">CURRENT</div>
+      <section class="col col-sm-5 text-center mx-auto">
+        <h2 class="mt-5 row justify-content-center">PLAYER 2</h2>
+        <div id="globalP2" class="row text-danger display-2 pb-5 justify-content-center">00</div>
+        <div class="row justify-content-center">
+          <div class="bg-danger mt-5" style="width: fit-content;">
+              <div id="currentP2">CURRENT</div>
+              <div id="currentScoreP2" class="text-white h4 mt-3">00</div>
+          </div>
+        </div>
       </section>
     </div>
   </main>
