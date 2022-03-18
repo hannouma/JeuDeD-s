@@ -1,0 +1,23 @@
+/* indique le style de l'élément au passage de la souris */
+a{
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+div.z-index{
+  color: red;
+  font-size: 3rem;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  display: none;
+}
+
+.bi-circle-fill{
+  display: none;
+}
