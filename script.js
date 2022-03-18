@@ -2,15 +2,6 @@ const rollDice = document.getElementById("rollDice");
 const diceImg = document.querySelector("#dice img");
 const hold = document.getElementById("hold");
 const newGame = document.getElementById("newGame");
-const roundScoreP1 = document.getElementById("currentScoreP1");
-const globalScoreP1 = document.getElementById("globalP1");
-const roundScoreP2 = document.getElementById("currentScoreP2");
-const globalScoreP2 = document.getElementById("globalP2");
-const player1 = document.getElementById("player1");
-const player2 = document.getElementById("player2");
-const leftSection = document.getElementById("leftSection");
-const rightSection = document.getElementById("rightSection");
-
 
 let roundScores, globalScore,  activePlayer;
 let winningScore = 100;
@@ -29,7 +20,7 @@ function start(){
 }
 
 //NEWGAME resets all the scores
-document.querySelector('#newGame').addEventListener('click', start);
+newGame.addEventListener('click', start);
 
 start();
 
