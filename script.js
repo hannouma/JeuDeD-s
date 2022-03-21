@@ -50,7 +50,7 @@ hold.addEventListener('click',function(){
   }
   if (globalScore[activePlayer] >= winningScore) {
     document.querySelector('.z-index').style.display = 'block';
-    document.querySelector('.z-index').textContent += activePlayer;
+    document.querySelector('.z-index').textContent = 'The Winner Is Player ' + activePlayer;
     playing = false;
   } else{
     nextPlayer();
@@ -68,5 +68,7 @@ function nextPlayer() {
   }else if(activePlayer === 2){
     activePlayer=1
   }
+  document.querySelector('.redPoint-' + activePlayer).style.display = 'inline-block';
+  document.querySelector('#sectionP-' + activePlayer).style.background = '#f9f9f9';
   roundScores = 0;
 }
