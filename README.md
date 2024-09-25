@@ -54,14 +54,16 @@ JavaScript: Game logic, event handling, and dynamic UI updates.
 
 
 ## File Structure
-/dice-game
-│
-├── /images          # Images for the dice faces
-│   └── dice1.png    # Dice images (1-6)
-│   └── dice2.png
-│   └── ...
-│
-├── index.html       # Main HTML file
-├── style.css        # CSS file for the layout and design
-├── script.js        # JavaScript file with the game logic
-└── README.md        # Documentation file (this file)
+```bash
+    /dice-game
+    │
+    ├── /images          # Images for the dice faces
+    │   └── dice1.png    # Dice images (1-6)
+    │   └── dice2.png
+    │   └── ...
+    │
+    ├── index.html       # Main HTML file
+    ├── style.css        # CSS file for the layout and design
+    ├── script.js        # JavaScript file with the game logic
+    └── README.md        # Documentation file (this file)
+```
