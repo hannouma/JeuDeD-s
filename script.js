@@ -4,7 +4,7 @@ const hold = document.getElementById("hold");
 const newGame = document.getElementById("newGame");
 
 let roundScores, globalScore,  activePlayer;
-const winningScore = 10;
+const winningScore = 100;
 
 //starting function that initialize the game 
 function start(){
@@ -24,7 +24,7 @@ function start(){
   const inactivePlayer = activePlayer === 1 ? 2 : 1;
   document.querySelector('.redPoint-' + inactivePlayer).style.display = 'none';
   document.querySelector('#sectionP-' + inactivePlayer).style.background = 'white';
-  
+
   diceImg.style.display = 'inline';
 }
 
