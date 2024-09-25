@@ -2,6 +2,8 @@
 
 A simple dice game where two players take turns rolling a dice, accumulating round scores, and saving their scores. The first player to reach 100 points wins!
 
+**Play the game online here: [Dice Game on GitHub Pages](https://hannouma.github.io/JeuDeD-s/)**
+
 ## Table of Contents
 - [Features](#features)
 - [How to Play](#how-to-play)
