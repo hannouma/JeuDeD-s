@@ -2,6 +2,7 @@ const rollDice = document.getElementById("rollDice");
 const diceImg = document.querySelector("#dice img");
 const hold = document.getElementById("hold");
 const newGame = document.getElementById("newGame");
+const jokeContainer = document.getElementById("jokeContainer");
 
 let roundScores, globalScore,  activePlayer;
 const winningScore = 100;
@@ -26,6 +27,21 @@ function start(){
   document.querySelector('#sectionP-' + inactivePlayer).style.background = 'white';
 
   diceImg.style.display = 'inline';
+  jokeContainer.textContent = ''; // Clear joke container on new game
+}
+
+// Fetch random joke from API
+function fetchJoke() {
+  fetch('https://v2.jokeapi.dev/joke/Any?lang=fr')
+  .then(response => response.json())
+  .then(data => {
+    if (data.type === 'single') {
+      jokeContainer.textContent = data.joke; // For single jokes
+    } else {
+      jokeContainer.textContent = `${data.setup} - ${data.delivery}`;
+    }
+  })
+    .catch(error => console.log('Erreur lors de la récupération de la blague:', error));
 }
 
 //NEWGAME resets all the scores
@@ -70,6 +86,8 @@ hold.addEventListener('click',function(){
     document.querySelector('.z-index').style.display = 'block';
     document.querySelector('.z-index').textContent = 'The Winner Is Player ' + activePlayer;
     playing = false;
+    // Fetch a random joke to display after the game ends
+    fetchJoke();
   } else {
     nextPlayer();
   }
